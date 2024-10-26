@@ -17,7 +17,7 @@ body {
 .toggle-btn {
   position: relative;
   width: 80px;
-  height: 38px;
+  height: 40px;
 }
 
 #check {
@@ -26,43 +26,45 @@ body {
 
 .btn-label {
   display: block;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #15009c;
+  border-radius: 40px;
   cursor: pointer;
-  border: 1px solid #260999;
-  border-radius: 41px;
+  overflow: hidden;
 }
 
 .inner {
   width: 200%;
+  height: 100%;
   margin-left: -100%;
-  transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in;
 }
 
 .inner::before,
 .inner::after {
-  float: left;
   width: 50%;
-  height: 38px;
-  padding: 0;
-  line-height: 38px;
-  font-size: 25px;
-  color: white;
+  height: 100%;
+  float: left;
   box-sizing: border-box;
+  font-size: 25px;
+  line-height: 38px;
+  padding: 0;
 }
 
-.inner:before {
+.inner::before {
   content: "\2716";
+  background: #15009c;
+  color: #fff;
   padding-left: 10px;
-  background-color: #15009c;
-  color: #ffffff;
 }
 
-.inner:after {
+.inner::after {
   content: "\2713";
+  background: #ebebeb;
   text-align: right;
-  padding-right: 10px;
-  background-color: #ebebeb;
   color: #15009c;
+  padding-right: 10px;
 }
 
 #check:checked + .btn-label .inner {
@@ -70,16 +72,17 @@ body {
 }
 
 .switch {
-  width: 25px;
-  margin: 6.5px;
-  background: #ffffff;
-  border: 2px solid #260999;
-  border-radius: 41px;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border: 2px solid #15009c;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
   right: 41px;
-  transition: all 0.3s ease-in 0s;
+  margin: 0 6.5px;
+  transition: all 0.3s ease-in;
 }
 
 #check:checked + .btn-label .switch {
