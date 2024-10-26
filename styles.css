@@ -1,0 +1,87 @@
+/* Created by Tivotal */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+
+.toggle-btn {
+  position: relative;
+  width: 80px;
+  height: 38px;
+}
+
+#check {
+  display: none;
+}
+
+.btn-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #260999;
+  border-radius: 41px;
+}
+
+.inner {
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.inner::before,
+.inner::after {
+  float: left;
+  width: 50%;
+  height: 38px;
+  padding: 0;
+  line-height: 38px;
+  font-size: 25px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.inner:before {
+  content: "\2716";
+  padding-left: 10px;
+  background-color: #15009c;
+  color: #ffffff;
+}
+
+.inner:after {
+  content: "\2713";
+  text-align: right;
+  padding-right: 10px;
+  background-color: #ebebeb;
+  color: #15009c;
+}
+
+#check:checked + .btn-label .inner {
+  margin-left: 0;
+}
+
+.switch {
+  width: 25px;
+  margin: 6.5px;
+  background: #ffffff;
+  border: 2px solid #260999;
+  border-radius: 41px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 41px;
+  transition: all 0.3s ease-in 0s;
+}
+
+#check:checked + .btn-label .switch {
+  right: 0;
+}
