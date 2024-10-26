@@ -53,14 +53,14 @@ body {
 }
 
 .inner::before {
-  content: "\2716";
+  content: "\2713";
   background: #15009c;
   color: #fff;
   padding-left: 10px;
 }
 
 .inner::after {
-  content: "\2713";
+  content: "\2716";
   background: #ebebeb;
   text-align: right;
   color: #15009c;
